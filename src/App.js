@@ -1,4 +1,5 @@
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense.js";
 function App() {
   const expenses = [
     {
@@ -21,11 +22,16 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
-
+  // handler function
+  const addExpenseHandler = (expense) => {
+    console.log("In App js");
+    console.log(expense);
+  };
+  // return
   return (
     <div>
-      <h2>Let's get started!</h2>
-      <Expenses item ={expenses} />
+      <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
+      <Expenses items={expenses} />
 
       {/* We are passing attributes to the expenseItem */}
       {/* <ExpenseItem

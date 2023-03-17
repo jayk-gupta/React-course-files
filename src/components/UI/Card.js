@@ -2,7 +2,7 @@ import './Card.css';
 
 function Card(props) {
   const classes = 'card ' + props.className;
-  console.log(classes);
+  // console.log(classes);
   return <div className={classes}>{props.children}</div>;
   // value of children prop will be the content b/w the opening and closing tag of the custom compnent 
 }
